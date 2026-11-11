@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1020">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Job Management"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <!-- Two‑column layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <!-- Left column: Job Details + Counts -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+
+                <!-- Job Details Card (same as portrait) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_job_details_card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/tvJobId"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="JOB-20260521-0001"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvJobStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not Started"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:background="@drawable/bg_status_chip"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"/>
+                    </LinearLayout>
+
+                    <!-- Detail columns -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <ImageView style="@style/PremiumInfoIcon" android:src="@drawable/ic_product"/>
+                                <LinearLayout style="@style/PremiumInfoTextContainer">
+                                    <TextView style="@style/PremiumInfoLabel" android:text="Part Number"/>
+                                    <TextView android:id="@+id/tvPartNumber" style="@style/PremiumInfoValue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <ImageView style="@style/PremiumInfoIcon" android:src="@drawable/ic_target"/>
+                                <LinearLayout style="@style/PremiumInfoTextContainer">
+                                    <TextView style="@style/PremiumInfoLabel" android:text="Target"/>
+                                    <TextView android:id="@+id/tvTarget" style="@style/PremiumInfoValue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <ImageView style="@style/PremiumInfoIcon" android:src="@drawable/ic_actual"/>
+                                <LinearLayout style="@style/PremiumInfoTextContainer">
+                                    <TextView style="@style/PremiumInfoLabel" android:text="Actual"/>
+                                    <TextView android:id="@+id/tvActual" style="@style/PremiumInfoValue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <ImageView style="@style/PremiumInfoIcon" android:src="@drawable/ic_defective_icon"/>
+                                <LinearLayout style="@style/PremiumInfoTextContainer">
+                                    <TextView style="@style/PremiumInfoLabel" android:text="Defective"/>
+                                    <TextView android:id="@+id/tvDefective" style="@style/PremiumInfoValue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <ImageView style="@style/PremiumInfoIcon" android:src="@drawable/ic_machine"/>
+                                <LinearLayout style="@style/PremiumInfoTextContainer">
+                                    <TextView style="@style/PremiumInfoLabel" android:text="Machine"/>
+                                    <TextView android:id="@+id/tvMachineName" style="@style/PremiumInfoValue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <ImageView style="@style/PremiumInfoIcon" android:src="@drawable/ic_floor"/>
+                                <LinearLayout style="@style/PremiumInfoTextContainer">
+                                    <TextView style="@style/PremiumInfoLabel" android:text="Floor"/>
+                                    <TextView android:id="@+id/tvFloor" style="@style/PremiumInfoValue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <ImageView style="@style/PremiumInfoIcon" android:src="@drawable/ic_shift"/>
+                                <LinearLayout style="@style/PremiumInfoTextContainer">
+                                    <TextView style="@style/PremiumInfoLabel" android:text="Shift"/>
+                                    <TextView android:id="@+id/tvShift" style="@style/PremiumInfoValue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <ImageView style="@style/PremiumInfoIcon" android:src="@drawable/ic_priority"/>
+                                <LinearLayout style="@style/PremiumInfoTextContainer">
+                                    <TextView style="@style/PremiumInfoLabel" android:text="Priority"/>
+                                    <TextView android:id="@+id/tvPriority" style="@style/PremiumInfoValue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#3C4A6B"
+                        android:layout_marginVertical="8dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <TextView style="@style/PremiumInfoLabel" android:text="Start Time"/>
+                                <TextView android:id="@+id/tvStartTime" style="@style/PremiumInfoValue"/>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <TextView style="@style/PremiumInfoLabel" android:text="End Time"/>
+                                <TextView android:id="@+id/tvEndTime" style="@style/PremiumInfoValue"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <TextView style="@style/PremiumInfoLabel" android:text="Planned DT"/>
+                                <TextView android:id="@+id/tvPlannedDowntime" style="@style/PremiumInfoValue"/>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <TextView style="@style/PremiumInfoLabel" android:text="Unplanned DT"/>
+                                <TextView android:id="@+id/tvUnplannedDowntime" style="@style/PremiumInfoValue"/>
+                            </LinearLayout>
+                            <LinearLayout style="@style/PremiumInfoRow">
+                                <TextView style="@style/PremiumInfoLabel" android:text="Total Runtime"/>
+                                <TextView android:id="@+id/tvTotalRuntime" style="@style/PremiumInfoValue"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Production Counts -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRODUCTION COUNTS"
+                    android:textColor="#A6B0CF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:background="@drawable/bg_count_card_good"
+                        android:layout_marginEnd="10dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_check_circle"
+                            app:tint="#FFFFFF"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Good Parts"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:id="@+id/tvGoodCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp">
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnGoodMinus"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:text="-"
+                                android:textSize="28sp"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#66BB6A"
+                                app:cornerRadius="12dp"/>
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnGoodPlus"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:text="+"
+                                android:textSize="28sp"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#66BB6A"
+                                app:cornerRadius="12dp"
+                                android:layout_marginStart="12dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:background="@drawable/bg_count_card_defective">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_warning_triangle"
+                            app:tint="#FFFFFF"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Defective"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:id="@+id/tvDefectiveCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp">
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnDefectiveMinus"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:text="-"
+                                android:textSize="28sp"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#EF5350"
+                                app:cornerRadius="12dp"/>
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnDefectivePlus"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:text="+"
+                                android:textSize="28sp"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#EF5350"
+                                app:cornerRadius="12dp"
+                                android:layout_marginStart="12dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Right column: Downtime cards -->
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DOWNTIME CONTROL"
+                    android:textColor="#A6B0CF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Planned Downtime Card -->
+                <LinearLayout
+                    android:id="@+id/cardPlannedDowntime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:background="@drawable/bg_card_planned"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_downtime_planned"
+                            app:tint="#FFFFFF"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Planned Downtime"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:layout_marginStart="12dp"/>
+
+                        <TextView
+                            android:id="@+id/tvPlannedStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Off"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="10dp"/>
+                    </LinearLayout>
+
+                    <!-- Scrollable category buttons (shown when OFF) -->
+                    <ScrollView
+                        android:id="@+id/scrollPlannedCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="12dp">
+
+                        <LinearLayout
+                            android:id="@+id/layoutPlannedCategories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+                            <!-- Buttons added programmatically -->
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/layoutPlannedActive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="4dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Category:"
+                                android:textColor="#A6B0CF"
+                                android:textSize="12sp"
+                                android:layout_marginEnd="4dp"/>
+                            <TextView
+                                android:id="@+id/tvPlannedActiveCategory"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Break Time"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sub Category:"
+                                android:textColor="#A6B0CF"
+                                android:textSize="12sp"
+                                android:layout_marginEnd="4dp"/>
+                            <TextView
+                                android:id="@+id/tvPlannedActiveSubcategory"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Lunch Break"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="LIVE TIMER"
+                                    android:textColor="#FFC107"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:id="@+id/tvPlannedTimer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="00:00:00"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="2dp"/>
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnStopPlanned"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:text="⏹ STOP"
+                                android:textAllCaps="false"
+                                android:textStyle="bold"
+                                android:textSize="13sp"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#D32F2F"
+                                app:cornerRadius="10dp"
+                                android:paddingHorizontal="20dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Unplanned Downtime Card -->
+                <LinearLayout
+                    android:id="@+id/cardUnplannedDowntime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:background="@drawable/bg_card_unplanned"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_downtime_unplanned"
+                            app:tint="#FFFFFF"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Unplanned Downtime"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:layout_marginStart="12dp"/>
+
+                        <TextView
+                            android:id="@+id/tvUnplannedStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Off"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="10dp"/>
+                    </LinearLayout>
+
+                    <!-- Scrollable category buttons (shown when OFF) -->
+                    <ScrollView
+                        android:id="@+id/scrollUnplannedCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="12dp">
+
+                        <LinearLayout
+                            android:id="@+id/layoutUnplannedCategories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+                            <!-- Buttons added programmatically -->
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <!-- Active Downtime Row (vertical, wrap content) -->
+                    <LinearLayout
+                        android:id="@+id/layoutUnplannedActive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone">
+
+                        <!-- Category -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="4dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Category:"
+                                android:textColor="#A6B0CF"
+                                android:textSize="12sp"
+                                android:layout_marginEnd="4dp"/>
+                            <TextView
+                                android:id="@+id/tvUnplannedActiveCategory"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Machine Failure"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <!-- Sub Category -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sub Category:"
+                                android:textColor="#A6B0CF"
+                                android:textSize="12sp"
+                                android:layout_marginEnd="4dp"/>
+                            <TextView
+                                android:id="@+id/tvUnplannedActiveSubcategory"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Electrical"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <!-- Timer + Stop Button Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- Live Timer -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="LIVE TIMER"
+                                    android:textColor="#FFC107"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:id="@+id/tvUnplannedTimer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="00:00:00"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="2dp"/>
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnStopUnplanned"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:text="⏹ STOP"
+                                android:textAllCaps="false"
+                                android:textStyle="bold"
+                                android:textSize="13sp"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#D32F2F"
+                                app:cornerRadius="10dp"
+                                android:paddingHorizontal="20dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

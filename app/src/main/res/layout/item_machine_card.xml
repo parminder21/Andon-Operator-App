@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#18233D"
+    app:strokeColor="#2D3A56"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Machine Name -->
+        <TextView
+            android:id="@+id/tvMachineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CNC Lathe-01"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <!-- Status Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/statusIndicator"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/circle_status_green"
+                android:layout_marginEnd="6dp"/>
+
+            <TextView
+                android:id="@+id/tvMachineStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Active"
+                android:textColor="#A6B0CF"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <!-- Floor / Location -->
+        <TextView
+            android:id="@+id/tvCurrentJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Floor: Welding Area"
+            android:textColor="#A6B0CF"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <!-- Health Score -->
+        <TextView
+            android:id="@+id/tvOee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Health: 100%"
+            android:textColor="#8A38F5"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:maxLines="1"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

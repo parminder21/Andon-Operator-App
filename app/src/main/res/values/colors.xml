@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PRIMARY PALETTE -->
+    <color name="primary">#3C0366</color>
+    <color name="primary_dark">#2A0247</color>
+    <color name="primary_light">#5C2A8C</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- SECONDARY (using charcoal as accent) -->
+    <color name="secondary">#444444</color>
+    <color name="secondary_dark">#333333</color>
+    <color name="secondary_light">#666666</color>
+    <color name="on_secondary">#FFFFFF</color>
+
+    <!-- BACKGROUND & SURFACE -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F5F5F5</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- TEXT COLORS -->
+    <color name="text_primary">#444444</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_on_dark">#FFFFFF</color>
+
+    <!-- UTILITY -->
+    <color name="error">#D32F2F</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="status_running">#2E7D32</color>
+    <color name="status_idle">#F57F17</color>
+    <color name="status_stopped">#C62828</color>
+
+    <!-- LEGACY (kept for reference) -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="splash_bg">#1A0A2E</color>   <!-- darker version of your primary -->
+
+    <color name="planned_button">#1976D2</color>
+    <color name="unplanned_button">#D32F2F</color>
+    <color name="stop_button">#D32F2F</color>
+
+</resources>
