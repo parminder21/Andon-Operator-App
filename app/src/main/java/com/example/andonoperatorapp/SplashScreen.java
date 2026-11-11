@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class SplashScreen extends AppCompatActivity {
 
-    private static final int SPLASH_DURATION = 2500; // milliseconds
+    private static final int SPLASH_DURATION = 2510; // milliseconds
 
     private ImageView logo;
     private ProgressBar progressBar;
